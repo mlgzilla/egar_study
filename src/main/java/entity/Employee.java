@@ -1,43 +1,19 @@
 package entity;
 
-import enums.Access;
-
-public class Person {
+public class Employee {
     private int id;
     private String firstName;
     private String middleName;
     private String secondName;
+    private String phoneNumber;
     private int cardNumber;
-    private String position;
-    private Access access;
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", cardNumber=" + cardNumber +
-                ", position='" + position + '\'' +
-                ", access=" + access +
-                '}';
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public Access getAccess() {
-        return access;
-    }
-
-    public void setAccess(Access access) {
-        this.access = access;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public int getId() {
@@ -80,13 +56,24 @@ public class Person {
         this.cardNumber = cardNumber;
     }
 
-    public Person(int id, String firstName, String middleName, String secondName, int cardNumber, String position, Access access) {
+    public Employee(int id, String firstName, String middleName, String secondName, String phoneNumber, int cardNumber) {
         this.id = id;
         this.firstName = firstName;
         this.middleName = middleName;
         this.secondName = secondName;
+        this.phoneNumber = phoneNumber;
         this.cardNumber = cardNumber;
-        this.position = position;
-        this.access = access;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", cardNumber=" + cardNumber +
+                '}';
     }
 }
