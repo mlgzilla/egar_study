@@ -1,7 +1,18 @@
 package entity;
 
+import java.util.Vector;
+
 public class Manager extends Employee {
     private String department;
+    private Vector<Report> reports;
+
+    public Vector<Report> getReports() {
+        return reports;
+    }
+
+    public void setReports(Vector<Report> reports) {
+        this.reports = reports;
+    }
 
     public String getDepartment() {
         return department;

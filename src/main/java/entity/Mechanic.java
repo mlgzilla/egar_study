@@ -2,9 +2,21 @@ package entity;
 
 import enums.Speciality;
 
+import java.util.Vector;
+
 public class Mechanic extends Employee {
     private int boxId;
     private Speciality speciality;
+
+    private Vector<Report> reports;
+
+    public Vector<Report> getReports() {
+        return reports;
+    }
+
+    public void setReports(Vector<Report> reports) {
+        this.reports = reports;
+    }
 
     public int getBoxId() {
         return boxId;
