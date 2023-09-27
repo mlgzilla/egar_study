@@ -1,8 +1,12 @@
-import entity.Employee;
+package egar.domain.employee;
+
+import egar.domain.employee.entity.Employee;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class EmployeeTest {
+    @DisplayName("Тест сотрудника")
     @Test
     void test1(){
         Employee employee = new Employee(0, "John", "None", "Doe", "60-80-02", 4221);

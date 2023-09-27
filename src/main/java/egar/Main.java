@@ -1,9 +1,11 @@
-package org.egar;
+package egar;
 
-import entity.Employee;
-import entity.Manager;
-import entity.Mechanic;
-import enums.Speciality;
+import egar.domain.employee.entity.Employee;
+import egar.domain.manager.entity.Manager;
+import egar.domain.mechanic.entity.Mechanic;
+import egar.enums.Speciality;
+
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,5 +15,10 @@ public class Main {
         System.out.println(employee);
         System.out.println(mechanic);
         System.out.println(manager);
+
+        HashMap<String, String> map = new HashMap<String, String>(){{
+            put("one", "odin");
+            put("two", "dva");
+        }};
     }
 }

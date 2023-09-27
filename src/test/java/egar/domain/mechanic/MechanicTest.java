@@ -1,7 +1,9 @@
-import entity.Mechanic;
-import entity.Report;
-import enums.Speciality;
-import enums.Status;
+package egar.domain.mechanic;
+
+import egar.domain.mechanic.entity.Mechanic;
+import egar.domain.report.entity.Report;
+import egar.enums.Speciality;
+import egar.enums.Status;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,8 @@
-package entity;
+package egar.domain.mechanic.entity;
 
-import enums.Speciality;
+import egar.domain.employee.entity.Employee;
+import egar.domain.report.entity.Report;
+import egar.enums.Speciality;
 
 import java.util.Vector;
 

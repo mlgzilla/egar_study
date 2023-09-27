@@ -1,6 +1,6 @@
-package entity;
+package egar.domain.report.entity;
 
-import enums.Status;
+import egar.enums.Status;
 
 public class Report {
     private int id;

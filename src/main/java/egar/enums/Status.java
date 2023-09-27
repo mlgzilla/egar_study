@@ -1,4 +1,4 @@
-package enums;
+package egar.enums;
 
 public enum Status {
     NotStarted,

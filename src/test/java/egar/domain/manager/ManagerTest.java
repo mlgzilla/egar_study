@@ -1,6 +1,8 @@
-import entity.Manager;
-import entity.Report;
-import enums.Status;
+package egar.domain.manager;
+
+import egar.domain.manager.entity.Manager;
+import egar.domain.report.entity.Report;
+import egar.enums.Status;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

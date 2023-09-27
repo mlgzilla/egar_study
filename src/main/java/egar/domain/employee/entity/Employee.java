@@ -1,4 +1,6 @@
-package entity;
+package egar.domain.employee.entity;
+
+import egar.exception.MyException;
 
 public class Employee {
     private int id;
@@ -63,6 +65,15 @@ public class Employee {
         this.secondName = secondName;
         this.phoneNumber = phoneNumber;
         this.cardNumber = cardNumber;
+    }
+
+    public void checkCard() throws MyException {
+        if(this.cardNumber > 2){
+            System.out.println("Card is good");
+        }
+        else {
+            throw new MyException("Card is bad");
+        }
     }
 
     @Override

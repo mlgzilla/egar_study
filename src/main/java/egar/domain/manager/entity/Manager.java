@@ -1,4 +1,7 @@
-package entity;
+package egar.domain.manager.entity;
+
+import egar.domain.employee.entity.Employee;
+import egar.domain.report.entity.Report;
 
 import java.util.Vector;
 
