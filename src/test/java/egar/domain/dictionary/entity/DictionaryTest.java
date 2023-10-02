@@ -13,11 +13,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class DictionaryTest {
     @Test
     void dictionaryTest1(){
-        List<Employee> employees = Dictionary.employeesInformation();
-        Map<Integer, Employee> employeeMap = new HashMap<>();
-        for (Employee employee : employees){
-            employeeMap.put(employee.getId(), employee);
+        List<EmployeeInformation> employees = Dictionary.employeesInformation();
+        Map<Integer, EmployeeInformation> employeeMap = new HashMap<>();
+        for (EmployeeInformation info : employees){
+            employeeMap.put(info.getId(), info);
         }
-        Assertions.assertEquals("John3", employeeMap.get(2).getFirstName());
+        Assertions.assertEquals("60-80-05", employeeMap.get(2).getPhoneNumber());
     }
 }
