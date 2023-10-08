@@ -1,24 +1,38 @@
 package egar;
 
-import egar.domain.employee.entity.Employee;
-import egar.domain.manager.entity.Manager;
-import egar.domain.mechanic.entity.Mechanic;
-import egar.enums.Speciality;
+import egar.domain.document.Document;
+import egar.domain.document.DocumentFactory;
+import egar.domain.registry.entity.Registry;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Employee employee = new Employee(0, "John", "None", "Doe", "60-80-02", 4221);
-        Mechanic mechanic = new Mechanic(1, "Jack", "Hugh", "Jackman", "60-80-03", 3987, 17, Speciality.Fabricator);
-        Manager manager = new Manager(2, "George", "W.", "Bush", "60-80-04", 911, "Department of defense");
-        System.out.println(employee);
-        System.out.println(mechanic);
-        System.out.println(manager);
+        int countMessage = 6;
+        // список для хранения сообщений из внешних систем
+        List<Document> documentList = new ArrayList<>();
+        // заполняем список генерируемыми данными
+        for (int i=0; i<countMessage; i++) {
+            documentList.add(new DocumentFactory().creteDocument(getCodeDoc()));
+        }
+        // выводим в консоль элементы списка
+        for (int i=0; i<documentList.size(); i++) {
+            Document document = documentList.get(i);
+            document.setCodeTypeDocument(String.valueOf(new Random().nextInt(6) + 1));
+            documentList.set(i, document);
+            System.out.println(document);
+        }
+        System.out.println("\n\n");
+        List<Document> registry = Registry.createRegistry(documentList);
+        for (Document document : registry) {
+            System.out.println(document);
+        }
+    }
 
-        HashMap<String, String> map = new HashMap<String, String>(){{
-            put("one", "odin");
-            put("two", "dva");
-        }};
+    static Integer getCodeDoc() {
+        int max = 3, min = 1;
+        return new Random().nextInt(max - min + 1) + min;
     }
 }

@@ -7,9 +7,8 @@ import egar.enums.Speciality;
 import java.util.Vector;
 
 public class Mechanic extends Employee {
-    private int boxId;
+    private int pitBoxId;
     private Speciality speciality;
-
     private Vector<Report> reports;
 
     public Vector<Report> getReports() {
@@ -20,12 +19,12 @@ public class Mechanic extends Employee {
         this.reports = reports;
     }
 
-    public int getBoxId() {
-        return boxId;
+    public int getPitBoxId() {
+        return pitBoxId;
     }
 
-    public void setBoxId(int boxId) {
-        this.boxId = boxId;
+    public void setPitBoxId(int pitBoxId) {
+        this.pitBoxId = pitBoxId;
     }
 
     public Speciality getSpeciality() {
@@ -36,9 +35,9 @@ public class Mechanic extends Employee {
         this.speciality = speciality;
     }
 
-    public Mechanic(int id, String firstName, String middleName, String secondName, String phoneNumber, int cardNumber, int boxId, Speciality speciality) {
+    public Mechanic(int id, String firstName, String middleName, String secondName, String phoneNumber, int cardNumber, int pitBoxId, Speciality speciality) {
         super(id, firstName, middleName, secondName, phoneNumber, cardNumber);
-        this.boxId = boxId;
+        this.pitBoxId = pitBoxId;
         this.speciality = speciality;
     }
 
@@ -51,7 +50,7 @@ public class Mechanic extends Employee {
                 ", secondName='" + this.getSecondName() + '\'' +
                 ", phoneNumber='" + this.getPhoneNumber() + '\'' +
                 ", cardNumber=" + this.getCardNumber() +
-                ", boxId=" + boxId +
+                ", boxId=" + pitBoxId +
                 ", speciality=" + speciality +
                 '}';
     }

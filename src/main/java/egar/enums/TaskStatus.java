@@ -1,6 +1,6 @@
 package egar.enums;
 
-public enum Status {
+public enum TaskStatus {
     NotStarted,
     InProgress,
     Finished,
