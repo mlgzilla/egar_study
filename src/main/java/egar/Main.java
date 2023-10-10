@@ -17,6 +17,8 @@ public class Main {
         for (int i=0; i<countMessage; i++) {
             documentList.add(new DocumentFactory().creteDocument(getCodeDoc()));
         }
+        Registry reg = new Registry(documentList.get(0));
+
         // выводим в консоль элементы списка
         for (int i=0; i<documentList.size(); i++) {
             Document document = documentList.get(i);
@@ -25,9 +27,9 @@ public class Main {
             System.out.println(document);
         }
         System.out.println("\n\n");
-        List<Document> registry = Registry.createRegistry(documentList);
-        for (Document document : registry) {
-            System.out.println(document);
+        List<Registry> registry = Registry.createRegistry(documentList);
+        for (Registry entry : registry) {
+            System.out.println(entry);
         }
     }
 
