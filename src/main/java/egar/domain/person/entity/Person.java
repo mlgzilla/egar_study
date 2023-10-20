@@ -6,6 +6,10 @@ public abstract class Person {
     private String secondName;
     private String phoneNumber;
 
+    public Person() {
+
+    }
+
     public String getPhoneNumber() {
         return phoneNumber;
     }
