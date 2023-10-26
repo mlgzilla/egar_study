@@ -7,7 +7,6 @@ import javax.persistence.Persistence;
 
 @UtilityClass
 public class EMFSingleton {
-
     private EntityManagerFactory emf;
 
     public synchronized EntityManagerFactory getEmf() {

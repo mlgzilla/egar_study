@@ -35,8 +35,11 @@ public class Mechanic extends Employee {
         this.speciality = speciality;
     }
 
-    public Mechanic(int id, String firstName, String middleName, String secondName, String phoneNumber, int cardNumber, int pitBoxId, Speciality speciality) {
-        super(id, firstName, middleName, secondName, phoneNumber, cardNumber);
+    public Mechanic() {
+    }
+
+    public Mechanic(String firstName, String middleName, String secondName, String phoneNumber, Integer cardNumber, String contractType, int pitBoxId, Speciality speciality) {
+        super(firstName, middleName, secondName, phoneNumber, cardNumber, contractType);
         this.pitBoxId = pitBoxId;
         this.speciality = speciality;
     }

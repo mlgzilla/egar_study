@@ -11,7 +11,7 @@ public class CardTest {
     @DisplayName("Тест карт")
     @Order(1)
     void cardTest(){
-        Employee employee = new Employee(0, "John", "None", "Doe", "60-80-02", 4221);
+        Employee employee = new Employee("John", "None", "Doe", "60-80-02", 4221, "temp");
         try {
             employee.checkCard();
         } catch (MyException e) {

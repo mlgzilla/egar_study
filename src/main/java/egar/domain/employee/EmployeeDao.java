@@ -1,7 +1,7 @@
 package egar.domain.employee;
 
 import egar.domain.employee.dto.EmployeeCriteria;
-import egar.domain.employee.entity.EntityDB;
+import egar.domain.employee.entity.Employee;
 import egar.util.EMFSingleton;
 
 import javax.persistence.EntityManagerFactory;
@@ -20,14 +20,14 @@ public class EmployeeDao {
         emf = EMFSingleton.getEmf();
     }
 
-    public Optional<EntityDB> findById(Integer id){
+    public Optional<Employee> findById(Integer id){
         var em = emf.createEntityManager();
-        EntityDB entityDB = em.find(EntityDB.class, id);
-        return Optional.ofNullable(entityDB);
+        Employee employee = em.find(Employee.class, id);
+        return Optional.ofNullable(employee);
     }
 
     @SuppressWarnings("unchecked")
-    public List<EntityDB> findByCriteriaWithQuery(EmployeeCriteria search){
+    public List<Employee> findByCriteriaWithQuery(EmployeeCriteria search){
         var em = emf.createEntityManager();
         StringBuilder querySql = new StringBuilder("SELECT e FROM EntityDB e ");
         if(search.getId()!=null){
@@ -73,11 +73,11 @@ public class EmployeeDao {
         if(search.getContractType()!=null){
             query.setParameter("contractType", search.getContractType());
         }
-        return (List<EntityDB>) query.getResultList();
+        return (List<Employee>) query.getResultList();
     }
 
     @SuppressWarnings("unchecked")
-    public List<EntityDB> findByCriteriaWithNamedQuery(EmployeeCriteria search) {
+    public List<Employee> findByCriteriaWithNamedQuery(EmployeeCriteria search) {
         var em = emf.createEntityManager();
         var query = em.createNamedQuery("search");
         query.setParameter("id", search.getId());
@@ -90,11 +90,11 @@ public class EmployeeDao {
         return query.getResultList();
     }
 
-    public List<EntityDB> findByCriteria(EmployeeCriteria search) {
+    public List<Employee> findByCriteria(EmployeeCriteria search) {
         var em = emf.createEntityManager();
         var cb = em.getCriteriaBuilder();
-        CriteriaQuery<EntityDB> query = cb.createQuery(EntityDB.class);
-        Root<EntityDB> root = query.from(EntityDB.class);
+        CriteriaQuery<Employee> query = cb.createQuery(Employee.class);
+        Root<Employee> root = query.from(Employee.class);
         List<Predicate> conds = new ArrayList<>();
         if (search.getId() != null) {
             conds.add(cb.equal(root.get("id"), search.getId()));

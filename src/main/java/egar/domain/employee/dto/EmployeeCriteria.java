@@ -66,4 +66,17 @@ public class EmployeeCriteria {
     public void setContractType(String contractType) {
         this.contractType = contractType;
     }
+
+    public EmployeeCriteria(Integer id, String firstName, String middleName, String secondName, String phoneNumber, Integer cardNumber, String contractType) {
+        this.id = id;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.secondName = secondName;
+        this.phoneNumber = phoneNumber;
+        this.cardNumber = cardNumber;
+        this.contractType = contractType;
+    }
+
+    public EmployeeCriteria() {
+    }
 }

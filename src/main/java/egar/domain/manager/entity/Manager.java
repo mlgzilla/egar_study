@@ -25,8 +25,8 @@ public class Manager extends Employee {
         this.department = department;
     }
 
-    public Manager(int id, String firstName, String middleName, String secondName, String phoneNumber, int cardNumber, String department) {
-        super(id, firstName, middleName, secondName, phoneNumber, cardNumber);
+    public Manager(String firstName, String middleName, String secondName, String phoneNumber, Integer cardNumber, String contractType, String department) {
+        super(firstName, middleName, secondName, phoneNumber, cardNumber, contractType);
         this.department = department;
     }
 
