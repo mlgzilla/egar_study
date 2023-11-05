@@ -74,3 +74,4 @@ CREATE TABLE public.report (
 ALTER TABLE public.mechanic DROP COLUMN reports;
 ALTER TABLE public.manager DROP COLUMN reports;
 ALTER TABLE public.report DROP CONSTRAINT report_fk;
+ALTER TABLE public.report DROP COLUMN employee_id;
